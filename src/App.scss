@@ -1,0 +1,128 @@
+
+.App{
+	text-align: center;
+}
+
+body{
+  overflow: hidden;
+	text-align: center;
+  background: url('images/blue.png') no-repeat center center fixed; 
+	background-size: cover;
+}
+
+/* Text animaion */
+
+h2 {
+	font-family: 'Impact', cursive;
+	font-size: 90px;
+	width: 100vw;
+	margin-top: 50px;
+	background: linear-gradient(
+		45deg,
+		hsl(0, 75%, 50%) 10%,
+		hsl(20, 75%, 50%) 10%,
+		hsl(20, 75%, 50%) 25%,
+		hsl(50, 75%, 50%) 25%,
+		hsl(50, 75%, 50%) 40%,
+		hsl(130, 75%, 50%) 40%,
+		hsl(130, 75%, 50%) 55%,
+		hsl(200, 75%, 50%) 55%,
+		hsl(200, 75%, 50%) 70%,
+		hsl(260, 75%, 50%) 70%,
+		hsl(260, 75%, 50%) 85%,
+		hsl(0, 75%, 50%) 85%
+	);
+
+	text-shadow: 0.5px -0.6vw #fff4;
+	color: #fff;
+	-webkit-background-clip: text;
+   	-webkit-text-fill-color: transparent;
+   	animation: 5s BeProud linear infinite,
+   	3s Always ease alternate infinite;
+}
+
+@keyframes BeProud {
+	100% { background-position: 100vw 0px; }
+}
+
+@keyframes Always {
+	100% { transform: scale(0.9);}
+}
+
+/* home button */
+
+.btn {
+  background: none;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 1em;
+  padding: 1em 2em;
+  text-transform: inherit;
+  transition: color 1s;
+}
+
+.btn-home {
+  $color: #31acfd;
+  color: $color;
+  
+  &:hover {
+    animation: halftone 2s forwards;
+    background: radial-gradient(circle, $color 0.3em, transparent 0.25em) 0 0 / 1.25em 1.25em
+              , radial-gradient(circle, $color 0.3em, transparent 0.25em) 6.25em 6.25em / 1em 1em;
+    color: adjust-hue($color,-130);
+  }
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
+
+// cards
+.cards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.card{
+	//background: url('images/question1.png') no-repeat;
+	background-size: 100% 100%;
+	width: 160px;
+	height: 240px;
+	text-align: center;
+	border: 2px solid black;
+	box-shadow: 5px 5px 5px rgb(57, 75, 61);
+	margin: 15px;
+	cursor: pointer;
+	perspective: 500px;
+}
+
+.flipped{
+//	background: url('images/dog.jpg') no-repeat;
+	background-size: 100% 100%;
+	width: 160px;
+	height: 240px;
+	text-align: center;
+	border: 1px solid black;
+	margin: 15px;
+	transform: rotatey(-180deg);
+}
+
+// .game{
+// 	position: relative;
+// }
+
+
+.mr-10{
+  margin-right: 10px;
+}
+
+.mr-20{
+  margin-right: 30px;
+}
