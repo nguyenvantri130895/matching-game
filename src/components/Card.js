@@ -6,37 +6,41 @@ class Game extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cardClass: 'card',
-            images: ['dog', 'cat'],
+            opened: '',
+            openedCards: [],
         }
     }
 
-    onFlip = () => {
-        console.log(this.props.card.id);
+    onOpen = () => {
+        var { card, index } = this.props;
         this.setState({
-            cardClass: 'flipped'
+            opened: 'opened',
         })
+        this.props.click(index, card.id, card.opened, card.matched)
     }
 
     render() {
-        var { card } = this.props;
-        var { cardClass } = this.state;
-        console.log(card);
+        var { card, index } = this.props;
+        console.log(card.matched)
+        console.log(this.state.opened)
         return (
-            <div>
-                <div className='card' onClick={this.onFlip}>
+            // <div className={"card" + (card.opened ? ' opened' : '') + (card.matched ? ' matched' : '')}>
+            <div
+                className={"card" + card.opened === true ? ' opened' : ''}
+                onClick={this.onOpen}
+            >
+                <div className="front">
                     <img
-                        src="/images/question1.png"
+                        src="https://picsum.photos/156/236?image=501"
                         alt='alt'
                     />
                 </div>
-                {/* <div className='flipped'>
+                <div className='back'>
                     <img
-                        src={'/images/' + this.props.images + '.jpg'}
+                        src={"https://picsum.photos/156/236?image=" + card.id}
                         alt='alt'
-                    >
-                    </img>
-                </div> */}
+                    />
+                </div>
             </div>
         );
     }
