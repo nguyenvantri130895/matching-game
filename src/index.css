@@ -1,4 +1,7 @@
-/* body {
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Black+And+White+Picture|Bowlby+One+SC|Kumar+One+Outline|Monoton|Press+Start+2P|Rock+Salt');
+
+
+body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,4 +14,4 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-} */
+}

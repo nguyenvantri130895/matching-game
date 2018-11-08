@@ -1,10 +1,8 @@
 import {combineReducers} from 'redux'
-import cards from './cards'
-import openedCards from './openedCards'
+import game from './game'
 
 const reducer = combineReducers({
-    cards,
-    openedCards
+    game,
 })
 
 export default reducer

@@ -1,11 +1,39 @@
 import * as types from './../constants'
 
-export const flip = (index, id, opened, matched) => {
+export const start = () => {
     return {
-        type: types.FLIP,
+        type: types.START,
+    }
+}
+
+export const check = (openedCards) => {
+    return {
+        type: types.CHECK,
+        openedCards,
+    }
+}
+
+export const open = (index) => {
+    return {
+        type: types.OPEN,
         index,
-        id, 
-        opened, 
-        matched
+    }
+}
+
+export const complete = () => {
+    return {
+        type: types.COMPLETE,
+    }
+}
+
+export const showScore = () => {
+    return {
+        type: types.SHOWSCORE,
+    }
+}
+
+export const passLevel = () => {
+    return {
+        type: types.PASSLEVEL,
     }
 }

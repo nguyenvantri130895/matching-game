@@ -1,1 +1,6 @@
-export const FLIP = 'FLIP'
+export const START = 'START'
+export const CHECK = 'CHECK'
+export const OPEN = 'OPEN'
+export const COMPLETE = 'COMPLETE'
+export const SHOWSCORE = 'SHOWSCORE'
+export const PASSLEVEL = 'PASSLEVEL'
