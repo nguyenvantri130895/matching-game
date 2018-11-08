@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom'
 import '../App.scss'
-//import { Link } from 'react-router-dom'
 import Card from './Card'
 
 class Game extends Component {
